@@ -1,0 +1,27 @@
+<div
+  (click)="close.emit()"
+  class="ui dimmer modals page transition visible active"
+  style="display: flex !important"
+>
+  <div
+    (click)="$event.stopPropagation()"
+    class="ui standard test modal transition visible active"
+    style="display: block !important"
+    #modalBox
+  >
+    <i (click)="close.emit()" class="close icon"></i>
+    <div class="header">
+      <ng-content class="" select="[modelHeader]"></ng-content>
+    </div>
+
+    <div class="image content">
+      <div class="ui medium image">
+        <img src="https://semantic-ui.com/images/avatar2/large/rachel.png" />
+      </div>
+
+      <ng-content select=".description"></ng-content>
+    </div>
+
+    <ng-content select=".actions"></ng-content>
+  </div>
+</div>

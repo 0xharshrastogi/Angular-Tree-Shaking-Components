@@ -1,0 +1,24 @@
+<app-divider>Model Component</app-divider>
+<button (click)="modalActive = !modalActive">Open Modal</button>
+
+<app-modal *ngIf="modalActive" (close)="modalActive = false">
+  <div modelHeader>Would You Like To Register Here</div>
+
+  <div class="description">Lorem ipsum dolor sit</div>
+
+  <div class="actions">
+    <button class="ui black deny button" (click)="modalActive = false">
+      Nope
+    </button>
+
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</app-modal>
+
+<br />
+
+<app-divider>Accordion Component</app-divider>
+<app-accordion type="multiple" [data]="accordionData"></app-accordion>

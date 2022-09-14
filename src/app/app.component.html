@@ -1,0 +1,27 @@
+<main class="ui container">
+  <nav class="ui secondary pointing menu">
+    <a
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="item"
+      >Home</a
+    >
+
+    <a [routerLink]="['/elements']" routerLinkActive="active" class="item"
+      >Elements</a
+    >
+
+    <a [routerLink]="['/collections']" routerLinkActive="active" class="item"
+      >Collections</a
+    >
+
+    <a [routerLink]="['/views']" routerLinkActive="active" class="item"
+      >Views</a
+    >
+
+    <a [routerLink]="['/mods']" routerLinkActive="active" class="item">Mods</a>
+  </nav>
+
+  <section class="ui segment"><router-outlet></router-outlet></section>
+</main>

@@ -1,0 +1,15 @@
+<div class="ui styled accordion">
+  <ng-container *ngFor="let record of data; let i = index">
+    <div
+      (click)="handler.select(i)"
+      class="title"
+      [ngClass]="{ active: handler.isActive(i) }"
+    >
+      <i class="dropdown icon"></i>
+      {{ record.title }}
+    </div>
+    <div class="content" [ngClass]="{ active: handler.isActive(i) }">
+      <p *ngFor="let description of record.descriptions">{{ description }}</p>
+    </div>
+  </ng-container>
+</div>
